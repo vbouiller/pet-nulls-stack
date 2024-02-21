@@ -3,8 +3,8 @@
 
 deployment "simple" {
   variables = {
-    prefix           = "PSE_EMEA"
-    instances        = 4
+    prefix           = "simple"
+    instances        = 1
   }
 }
 
