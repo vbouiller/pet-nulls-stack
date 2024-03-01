@@ -22,14 +22,14 @@ deployment "prod" {
   }
 }
 
-// orchestrate "auto_approve" "auto_deploy" {
-//   check {
-//     condition = context.plan.applyable
-//     error_message = "Plan not applyable."
-//   }
+orchestrate "auto_approve" "auto_deploy" {
+  check {
+    condition = context.plan.applyable
+    error_message = "Plan not applyable."
+  }
 
-//   check {
-//     condition = context.plan.mode != "destroy"
-//     error_message = "Destroy plans are not allowed to be auto-approved."
-//   }
-// }
+  check {
+    condition = context.plan.mode != "destroy"
+    error_message = "Destroy plans are not allowed to be auto-approved."
+  }
+}
