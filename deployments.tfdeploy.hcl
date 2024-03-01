@@ -25,11 +25,11 @@ deployment "prod" {
 orchestrate "auto_approve" "auto_deploy" {
   check {
     condition = context.plan.applyable
-    error-message = "Plan not applyable."
+    error_message = "Plan not applyable."
   }
 
   check {
     condition = context.plan.mode != "destroy"
-    error-message = "Destroy plans are not allowed to be auto-approved."
+    error_message = "Destroy plans are not allowed to be auto-approved."
   }
 }
